@@ -2,18 +2,18 @@ import { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { WordsContext } from '../contexts/WordsContext';
 
-const LabelStyled = styled.label`
-	color: white;
-	font-family: 'Mr Dafoe', cursive;
-	color: #eb219b;
-	-webkit-text-fill-color: rgba(253, 90, 250, 1);
-	text-shadow: -2px -2px 0 #ffbaf2;
-	-webkit-filter: drop-shadow(3px 3px 1px #441f62);
-	font-size: 35px;
-	font-weight: normal;
-	margin-bottom: 4vh;
-	text-align: center;
-`;
+// const LabelStyled = styled.label`
+// 	color: white;
+// 	font-family: 'Mr Dafoe', cursive;
+// 	color: #eb219b;
+// 	-webkit-text-fill-color: rgba(253, 90, 250, 1);
+// 	text-shadow: -2px -2px 0 #ffbaf2;
+// 	-webkit-filter: drop-shadow(3px 3px 1px #441f62);
+// 	font-size: 35px;
+// 	font-weight: normal;
+// 	margin-bottom: 4vh;
+// 	text-align: center;
+// `;
 const InputStyled = styled.input`
 	text-align: center;
 	height: 4vw;
@@ -46,7 +46,7 @@ const SubmitStyled = styled.input`
 
 export const WordInput = () => {
 	const [userInput, setUserInput] = useState('');
-	const { input, setInput } = useContext(WordsContext);
+	const { setInput } = useContext(WordsContext);
 	const handleForm = (e) => {
 		e.preventDefault();
 		console.log('Salut toi.', userInput);
