@@ -19,7 +19,7 @@ const StyledA = styled.a`
 export const Footer = () => {
 	return (
 		<FooterStyled>
-			<StyledA href="github.com">Editer sur Github</StyledA>
+			<StyledA href="https://github.com/Damiaou/rimesfaibles">Editer sur Github</StyledA>
 		</FooterStyled>
 	);
 };
