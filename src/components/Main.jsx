@@ -9,7 +9,7 @@ import { WordsContext } from '../contexts/WordsContext';
 const SectionStyled = styled.section`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 6vh;
 	flex-grow: 1;
@@ -18,7 +18,7 @@ const SectionStyled = styled.section`
 export const Main = () => {
 	const WordsProvider = WordsContext.Provider;
 	const [input, setInput] = useState('');
-
+	console.log('Build by damsauvagere@gmail.com');
 	return (
 		<SectionStyled>
 			<WordsProvider value={{ input, setInput }}>

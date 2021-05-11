@@ -5,8 +5,7 @@ import { WordsContext } from '../contexts/WordsContext';
 const H4Styled = styled.h4`
 	color: transparent;
 	text-transform: uppercase;
-	font-size: 6vw;
-	transform: translatey(25px);
+	font-size: 8vw;
 	background: linear-gradient(cornflowerblue 30%, #e4e4e4, darkmagenta 60%, cornflowerblue 100%);
 	background-size: contain;
 	-webkit-background-clip: text;
@@ -17,10 +16,19 @@ const H4Styled = styled.h4`
 
 export const WordOutput = () => {
 	const { input } = useContext(WordsContext);
-	console.log('input', input);
+	const DivStyled = styled.div`
+		margin-top: 3vh;
+		border: 4px solid #eb219b;
+		box-sizing: border-box;
+		display: ${input ? 'flex' : 'none'};
+		justify-content: center;
+		align-items: center;
+		padding: 2vw;
+		filter: drop-shadow(2px 2px 1px #88006a) drop-shadow(1px 1px 1px magenta);
+	`;
 	return (
-		<>
+		<DivStyled>
 			<H4Styled>{input}</H4Styled>
-		</>
+		</DivStyled>
 	);
 };

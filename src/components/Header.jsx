@@ -7,7 +7,7 @@ const HeaderStyled = styled.header`
 	justify-content: center;
 	align-items: center;
 	height: 20vh;
-	padding: 1vw;
+	padding-top: 1vw;
 `;
 
 export const Header = () => {

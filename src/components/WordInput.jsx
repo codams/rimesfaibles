@@ -16,7 +16,7 @@ import { WordsContext } from '../contexts/WordsContext';
 // `;
 const InputStyled = styled.input`
 	text-align: center;
-	height: 4vw;
+	height: 8vh;
 	border-radius: 2em;
 	font-size: 4vw;
 	color: #eb219b;
@@ -34,12 +34,12 @@ const SubmitStyled = styled.input`
 	margin-top: 4vh;
 	height: 8vh;
 	border-radius: 2em;
-	color: white;
+	background-color: #eb219b;
 	font-family: 'Mr Dafoe', cursive;
-	color: #eb219b;
-	-webkit-text-fill-color: rgba(253, 90, 250, 1);
-	text-shadow: -2px -2px 0 #ffbaf2;
-	-webkit-filter: drop-shadow(3px 3px 1px #441f62);
+	color: #fff;
+	-webkit-text-fill-color: #fff;
+	text-shadow: -1px -1px 0 #fff;
+	-webkit-filter: drop-shadow(1px 1px 1px #fff);
 	font-weight: 700;
 	font-size: 3vh;
 `;
@@ -49,11 +49,10 @@ export const WordInput = () => {
 	const { setInput } = useContext(WordsContext);
 	const handleForm = (e) => {
 		e.preventDefault();
-		console.log('Salut toi.', userInput);
 		setInput(userInput);
 	};
 	return (
-		<FormStyled onSubmit={(e) => handleForm(e)}>
+		<FormStyled autocomplete="off" onSubmit={(e) => handleForm(e)}>
 			{/* <LabelStyled htmlFor="wordInput">Entre un mot pour trouver une rime :</LabelStyled> */}
 			<InputStyled
 				type="text"
@@ -63,7 +62,7 @@ export const WordInput = () => {
 					setUserInput(e.target.value);
 				}}
 			/>
-			<SubmitStyled type="submit" value="Donne moi de la rime !" />
+			<SubmitStyled type="submit" value="Entre un mot pour connaitre sa rime !" />
 		</FormStyled>
 	);
 };
